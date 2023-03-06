@@ -24,7 +24,7 @@ import { OrdersComponent } from './orders/orders.component';
 import { FinishDiplomaComponent } from './finish-diploma/finish-diploma.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { JwtModule } from '@auth0/angular-jwt';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +51,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MaterialModule,
     ReactiveFormsModule,
     HttpClientModule,
+    JwtModule.forRoot({
+      config: {
+      tokenGetter: () => {
+        return localStorage.getItem('access_token');
+      },
+      allowedDomains: ['localhost:7096'],
+      },
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

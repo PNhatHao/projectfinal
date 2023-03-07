@@ -119,9 +119,9 @@ export class ApiService {
     });
   }
 
-  // getCategories() {
-  //   return this.http.get<Category[]>(this.baseUrl + 'GetAllCategories');
-  // }
+  getCategories() {
+    return this.http.get<Category[]>(this.baseUrl + 'GetAllCategories');
+  }
 
   insertDiploma(diploma: any) {
     return this.http.post(this.baseUrl + 'InsertDiploma', diploma, {

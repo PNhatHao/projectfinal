@@ -39,7 +39,7 @@ const routes: Routes = [
     canActivate: [AuthorizationGuard],
   },
   {
-    path: 'books/return',
+    path: 'diplomas/finish',
     component: FinishDiplomaComponent,
     canActivate: [AuthenticationGuard],
   },
@@ -49,12 +49,12 @@ const routes: Routes = [
     canActivate: [AuthorizationGuard],
   },
   {
-    path: 'books/maintenance',
+    path: 'diplomas/maintenance',
     component: ManageDiplomasComponent,
     canActivate: [AuthorizationGuard],
   },
   {
-    path: 'books/categories',
+    path: 'diplomas/categories',
     component: ManageCategoriesComponent,
     canActivate: [AuthorizationGuard],
   },

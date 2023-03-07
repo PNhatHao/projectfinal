@@ -1,1 +1,62 @@
-<p>manage-diplomas works!</p>
+<mat-card class="add">
+  <mat-card-header>
+      <mat-card-title>Thêm chứng chỉ mới</mat-card-title>
+      <mat-card-subtitle>{{addMsg}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+      <form [formGroup]="addDiplomaForm">
+          <mat-form-field appearance="fill" color="accent">
+              <mat-label>Tên chứng chỉ</mat-label>
+              <input matInput formControlName="title">
+              <mat-error *ngIf="this.Title.invalid">Bắt buộc</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" color="accent">
+              <mat-label>Loại chứng chỉ</mat-label>
+              <input matInput formControlName="category">
+              <mat-error *ngIf="this.Category.invalid">Bắt buộc</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" color="accent">
+              <mat-label>Mô tả chứng chỉ</mat-label>
+              <input matInput formControlName="subcategory">
+              <mat-error *ngIf="this.Subcategory.invalid">Bắt buộc</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" color="accent">
+              <mat-label>Vị trí làm việc</mat-label>
+              <input matInput formControlName="position">
+              <mat-error *ngIf="this.Position.invalid">Bắt buộc</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" color="accent">
+              <mat-label>Điểm</mat-label>
+              <input matInput formControlName="rank">
+              <mat-error *ngIf="this.Rank.invalid">Bắt buộc</mat-error>
+          </mat-form-field>
+
+          <button mat-flat-button color="accent" [disabled]="this.addDiplomaForm.invalid"
+                  (click)="insertDiploma()">Thêm</button>
+      </form>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="delete">
+  <mat-card-header>
+      <mat-card-title>Xóa chứng chỉ</mat-card-title>
+      <mat-card-subtitle>{{delMsg}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+      <form>
+          <mat-form-field appearance="fill" color="accent">
+              <mat-label>Mã chứng chi</mat-label>
+              <input matInput [formControl]="deleteDiplomaForm">
+              <mat-error *ngIf="this.deleteDiplomaForm.invalid">Bắt buộc</mat-error>
+          </mat-form-field>
+      </form>
+  </mat-card-content>
+  <mat-card-actions>
+      <button mat-flat-button color="warn" [disabled]="this.deleteDiplomaForm.invalid"
+              (click)="deleteDiploma()">Xóa</button>
+  </mat-card-actions>
+</mat-card>

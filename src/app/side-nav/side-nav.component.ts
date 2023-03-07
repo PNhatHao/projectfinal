@@ -9,31 +9,31 @@ import { SideNavItem } from '../models/models.module';
 export class SideNavComponent {
   sideNavContent: SideNavItem[] = [
     {
-      title: 'view diplomas',
+      title: 'Xem chứng chỉ',
       link: 'diplomas/course',
     },
     {
-      title: 'manage books',
+      title: 'Quản lí chứng chỉ',
       link: 'diplomas/maintenance',
     },
     {
-      title: 'manage categories',
+      title: 'Quản lí văn bằng',
       link: 'diplomas/categories',
     },
     {
-      title: 'finish diploma',
+      title: 'Hoàn thành chứng chỉ',
       link: 'diplomas/finish',
     },
     {
-      title: 'view users',
+      title: 'Quản lí nhân viên',
       link: 'users/list',
     },
     {
-      title: 'all orders',
+      title: 'Quản lí đăng kí',
       link: 'users/all-orders',
     },
     {
-      title: 'my orders',
+      title: 'Đã đăng kí',
       link: 'users/order',
     },
   ];

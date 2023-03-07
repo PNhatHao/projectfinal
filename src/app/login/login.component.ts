@@ -47,14 +47,14 @@ export class LoginComponent {
           this.responseMsg = '';
           this.api.saveToken(res.toString());
 
-          this.router.navigateByUrl("/diplomas/course");
+          // this.router.navigateByUrl("/diplomas/course");
 
-          // let isActive = this.api.getTokenUserInfo()?.active ?? false;
-          // if (isActive) this.router.navigateByUrl('/diplomas/course');
-          // else {
-          //   this.responseMsg = 'Tài khoản không hoạt động!';
-          //   this.api.deleteToken();
-          // }
+          let isActive = this.api.getTokenUserInfo()?.active ?? false;
+          if (isActive) this.router.navigateByUrl('/diplomas/course');
+          else {
+            this.responseMsg = 'Tài khoản không hoạt động!';
+            this.api.deleteToken();
+          }
         }
       },
       error: (err: any) => {

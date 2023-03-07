@@ -59,87 +59,87 @@ export class ApiService {
     return user;
   }
 
-  // getAllDiplomas() {
-  //   return this.http.get<Diploma[]>(this.baseUrl + 'GetAllDiplomas');
-  // }
+  getAllDiplomas() {
+    return this.http.get<Diploma[]>(this.baseUrl + 'GetAllDiplomas');
+  }
 
-  // orderDiploma(userId: number, diplomaId: number) {
-  //   return this.http.get(this.baseUrl + 'OrderDiploma/' + userId + '/' + diplomaId, {
-  //     responseType: 'text',
-  //   });
-  // }
+  orderDiploma(userId: number, diplomaId: number) {
+    return this.http.get(this.baseUrl + 'OrderDiploma/' + userId + '/' + diplomaId, {
+      responseType: 'text',
+    });
+  }
 
-  // getOrdersOfUser(userid: number) {
-  //   return this.http.get<Order[]>(this.baseUrl + 'GetOrders/' + userid);
-  // }
+  getOrdersOfUser(userid: number) {
+    return this.http.get<Order[]>(this.baseUrl + 'GetOrders/' + userid);
+  }
 
-  // getAllOrders() {
-  //   return this.http.get<Order[]>(this.baseUrl + 'GetAllOrders');
-  // }
+  getAllOrders() {
+    return this.http.get<Order[]>(this.baseUrl + 'GetAllOrders');
+  }
 
-  // finishDiploma(diplomaId: string, userId: string) {
-  //   return this.http.get(this.baseUrl + 'FinishDiploma/' + diplomaId + '/' + userId, {
-  //     responseType: 'text',
-  //   });
-  // }
+  finishDiploma(diplomaId: string, userId: string) {
+    return this.http.get(this.baseUrl + 'FinishDiploma/' + diplomaId + '/' + userId, {
+      responseType: 'text',
+    });
+  }
 
-  // getAllUsers() {
-  //   return this.http.get<User[]>(this.baseUrl + 'GetAllUsers').pipe(
-  //     map((users) =>
-  //       users.map((user) => {
-  //         let temp: User = user;
-  //         temp.userType = user.userType == 0 ? UserType.USER : UserType.ADMIN;
-  //         return temp;
-  //       })
-  //     )
-  //   );
-  // }
+  getAllUsers() {
+    return this.http.get<User[]>(this.baseUrl + 'GetAllUsers').pipe(
+      map((users) =>
+        users.map((user) => {
+          let temp: User = user;
+          temp.userType = user.userType == 0 ? UserType.USER : UserType.ADMIN;
+          return temp;
+        })
+      )
+    );
+  }
 
-  // blockUser(id: number) {
-  //   return this.http.get(this.baseUrl + 'ChangeBlockStatus/1/' + id, {
-  //     responseType: 'text',
-  //   });
-  // }
+  blockUser(id: number) {
+    return this.http.get(this.baseUrl + 'ChangeBlockStatus/1/' + id, {
+      responseType: 'text',
+    });
+  }
 
-  // unblockUser(id: number) {
-  //   return this.http.get(this.baseUrl + 'ChangeBlockStatus/0/' + id, {
-  //     responseType: 'text',
-  //   });
-  // }
+  unblockUser(id: number) {
+    return this.http.get(this.baseUrl + 'ChangeBlockStatus/0/' + id, {
+      responseType: 'text',
+    });
+  }
 
-  // enableUser(id: number) {
-  //   return this.http.get(this.baseUrl + 'ChangeEnableStatus/1/' + id, {
-  //     responseType: 'text',
-  //   });
-  // }
+  enableUser(id: number) {
+    return this.http.get(this.baseUrl + 'ChangeEnableStatus/1/' + id, {
+      responseType: 'text',
+    });
+  }
 
-  // disableUser(id: number) {
-  //   return this.http.get(this.baseUrl + 'ChangeEnableStatus/0/' + id, {
-  //     responseType: 'text',
-  //   });
-  // }
+  disableUser(id: number) {
+    return this.http.get(this.baseUrl + 'ChangeEnableStatus/0/' + id, {
+      responseType: 'text',
+    });
+  }
 
   // getCategories() {
   //   return this.http.get<Category[]>(this.baseUrl + 'GetAllCategories');
   // }
 
-  // insertDiploma(diploma: any) {
-  //   return this.http.post(this.baseUrl + 'InsertDiploma', diploma, {
-  //     responseType: 'text',
-  //   });
-  // }
+  insertDiploma(diploma: any) {
+    return this.http.post(this.baseUrl + 'InsertDiploma', diploma, {
+      responseType: 'text',
+    });
+  }
 
-  // deleteDiploma(id: number) {
-  //   return this.http.delete(this.baseUrl + 'DeleteDiploma/' + id, {
-  //     responseType: 'text',
-  //   });
-  // }
+  deleteDiploma(id: number) {
+    return this.http.delete(this.baseUrl + 'DeleteDiploma/' + id, {
+      responseType: 'text',
+    });
+  }
 
-  // insertCategory(category: string, subcategory: string) {
-  //   return this.http.post(
-  //     this.baseUrl + 'InsertCategory',
-  //     { category: category, subCategory: subcategory },
-  //     { responseType: 'text' }
-  //   );
-  // }
+  insertCategory(category: string, subcategory: string) {
+    return this.http.post(
+      this.baseUrl + 'InsertCategory',
+      { category: category, subCategory: subcategory },
+      { responseType: 'text' }
+    );
+  }
 }

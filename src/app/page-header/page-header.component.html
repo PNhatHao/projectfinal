@@ -1,34 +1,4 @@
-<!-- <mat-toolbar color="primary">
-  <button mat-icon-button (click)="menuClicked.emit()">
-      <mat-icon>Danh mục</mat-icon>
-  </button>
-  <h1>Quản lí chứng chỉ</h1>
 
-  <div class="user-info">
-      <span>
-          Tài khoản,
-          {{this.api.getTokenUserInfo()?.firstName | titlecase}}
-      </span>
-      <button mat-icon-button [matMenuTriggerFor]="userMenu">
-          <mat-icon>account_circle</mat-icon>
-      </button>
-  </div>
-
-  <mat-menu #userMenu="matMenu">
-      <button mat-menu-item routerLink="/login">
-          <mat-icon>Đăng nhập</mat-icon>
-          <span>Đăng nhập</span>
-      </button>
-      <button mat-menu-item routerLink="/users/profile">
-          <mat-icon>Tài khoản</mat-icon>
-          <span>Hồ sơ</span>
-      </button>
-      <button mat-menu-item (click)="logOut()">
-          <mat-icon>Đăng xuất</mat-icon>
-          <span>Đăng xuất</span>
-      </button>
-  </mat-menu>
-</mat-toolbar> -->
 <mat-toolbar color="primary">
   <button mat-icon-button (click)="menuClicked.emit()">
     <mat-icon>menu</mat-icon>
@@ -38,7 +8,7 @@
   <div class="user-info">
     <span>
       Tài khoản,
-      {{this.api.getTokenUserInfo()?.firstName | titlecase}}
+      <!-- {{this.api.getTokenUserInfo()?.firstName | titlecase}} -->
     </span>
 
     <button mat-icon-button [matMenuTriggerFor]="userMenu">

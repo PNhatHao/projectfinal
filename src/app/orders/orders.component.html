@@ -1,4 +1,17 @@
-<h1>Danh sách đăng kí</h1>
+
+
+
+<page-header (menuClicked)="sideNav.toggle()"></page-header>
+
+<mat-sidenav-container>
+  <mat-sidenav mode="side" #sideNav opened class="mat-elevation-z6">
+    <side-nav></side-nav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+
+
+    <h1>Danh sách đăng kí</h1>
 
 <mat-button-toggle-group #actions="matButtonToggleGroup">
     <mat-button-toggle value="all" (change)="filter(actions.value)" checked>Tất cả</mat-button-toggle>
@@ -50,3 +63,10 @@
     <tr mat-row *matRowDef="let row; columns: columns"></tr>
 
 </table>
+
+
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<page-footer></page-footer>

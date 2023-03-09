@@ -25,7 +25,7 @@ export class ManageDiplomasComponent {
       position: fb.control('', [Validators.required]),
       category: fb.control('', [Validators.required]),
       subcategory: fb.control('', [Validators.required]),
-      point: fb.control('', [Validators.required]),
+      // point: fb.control('', [Validators.required]),
     });
 
     this.deleteDiplomaForm = fb.control('', [Validators.required]);
@@ -39,7 +39,7 @@ export class ManageDiplomasComponent {
         category: this.Category.value,
         subCategory: this.Subcategory.value,
       },
-      point: this.Point.value,
+      // point: this.Point.value,
       available: true,
       position: this.Position.value,
     };
@@ -51,7 +51,7 @@ export class ManageDiplomasComponent {
         this.Position.setValue('');
         this.Category.setValue('');
         this.Subcategory.setValue('');
-        this.Point.setValue('');
+        // this.Point.setValue('');
       },
       error: (err: any) => console.log(err),
     });
@@ -85,7 +85,7 @@ export class ManageDiplomasComponent {
   get Subcategory(): FormControl {
     return this.addDiplomaForm.get('subcategory') as FormControl;
   }
-  get Point(): FormControl {
-    return this.addDiplomaForm.get('point') as FormControl;
-  }
+  // get Point(): FormControl {
+  //   return this.addDiplomaForm.get('point') as FormControl;
+  // }
 }

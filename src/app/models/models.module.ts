@@ -1,6 +1,7 @@
 export interface SideNavItem {
   title: string;
   link: string;
+  permission: UserType[];
 }
 
 export enum UserType {

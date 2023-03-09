@@ -62,7 +62,16 @@ const routes: Routes = [
     path: 'users/profile',
     component: ProfileComponent,
     canActivate: [AuthenticationGuard],
-  }
+  },
+  {
+    path: '',
+    component: LoginComponent,
+  },
+  {
+    path: '',
+    redirectTo:'form', pathMatch:'full'
+  },
+
 ];
 
 @NgModule({

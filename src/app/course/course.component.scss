@@ -1,9 +1,24 @@
 @import "../../theme.scss";
 
 :host {
-  display: block;
-  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  z-index: 1;
+  gap: 2rem;
 }
+
+mat-sidenav-container {
+  flex-grow: 2  ;
+}
+
+
+
+
+// :host {
+//   display: block;
+//   padding: 2rem 3rem;
+// }
 
 mat-form-field {
   width: 500px;

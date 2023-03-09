@@ -20,23 +20,23 @@ export class ProfileComponent implements OnInit {
     let user = this.api.getTokenUserInfo();
 
     this.dataSource = [
-      { name: 'Name', value: user?.firstName + ' ' + user?.lastName },
+      { name: 'Tên', value: user?.firstName + ' ' + user?.lastName },
       { name: 'Email', value: user?.email ?? '' },
-      { name: 'Mobile', value: user?.mobile },
-      { name: 'Blocked', value: this.blockedStatus() },
-      { name: 'Active', value: this.activeStatus() },
+      // { name: 'Mobile', value: user?.mobile },
+      { name: 'Trạng thái', value: this.blockedStatus() },
+      { name: 'Tài khoản', value: this.activeStatus() },
     ];
   }
 
   blockedStatus(): string {
     let bloked = this.api.getTokenUserInfo()!.blocked;
-    return bloked ? 'Tài khoản đã bị chặn' : 'Tài khoản bình thường';
+    return bloked ? 'Đã bị chặn' : 'Bình thường';
   }
 
   activeStatus(): string {
     let active = this.api.getTokenUserInfo()!.active;
     return active
-      ? 'Tài khoản đã kích hoạt'
-      : 'Tài khoản chưa được kích hoạt';
+      ? 'Đã kích hoạt'
+      : 'Chưa được kích hoạt';
   }
 }

@@ -15,7 +15,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { CourseComponent } from './course/course.component';
 import { DiplomaCategoriesComponent } from './diploma-categories/diploma-categories.component';
-import { FinishGuardsComponent } from './finish-guards/finish-guards.component';
+
 import { LoginComponent } from './login/login.component';
 import { ManageCategoriesComponent } from './manage-categories/manage-categories.component';
 import { ManageDiplomasComponent } from './manage-diplomas/manage-diplomas.component';
@@ -35,7 +35,7 @@ import { JwtModule } from '@auth0/angular-jwt';
     RegisterComponent,
     CourseComponent,
     DiplomaCategoriesComponent,
-    FinishGuardsComponent,
+
     LoginComponent,
     ManageCategoriesComponent,
     ManageDiplomasComponent,

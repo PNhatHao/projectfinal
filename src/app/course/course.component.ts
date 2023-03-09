@@ -14,7 +14,7 @@ export class CourseComponent implements OnInit {
     'id',
     'title',
     'position',
-    'point',
+    // 'point',
     'available',
     'order',
   ];

@@ -9,6 +9,13 @@
     <mat-grid-tile>
         <mat-form-field appearance="fill" color="accent">
             <mat-label>Tên</mat-label>
+            <!-- <span class="input-group-text" >
+              <i class="fa-solid fa-pencil"
+              [class.green-icon]="this.registerForm.get('id')?.valid"
+               [class.red-icon]="this.registerForm.get('id')?.invalid && this.registerForm.get('id')?.touched"
+
+              ></i>
+            </span> -->
             <input matInput formControlName="firstName">
             <mat-error *ngIf="this.FirstName.invalid">{{getFirstNameErrors()}}</mat-error>
         </mat-form-field>
